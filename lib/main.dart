@@ -66,7 +66,7 @@ class CryptoListState extends State<CryptoList> {
 
   String cryptoPrice(Map crypto) {
     int decimals = 2;
-    int fac = pow(10, decimals);
+    int fac = pow(10, decimals).toInt();;
     double d = (crypto['quote']['USD']['price']);
     return "\$" + (d = (d * fac).round() / fac).toString();
   }
