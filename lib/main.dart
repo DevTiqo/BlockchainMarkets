@@ -41,8 +41,9 @@ class CryptoListState extends State<CryptoList> {
     List cryptoDatas = [];
 
     print('getting crypto prices');
-    String _apiURL =
-        "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15";
+    Uri _apiURL = Uri.parse(
+        "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15");
+  
     setState(() {
       this._loading = true;
     });
